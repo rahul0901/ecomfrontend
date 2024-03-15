@@ -1,0 +1,130 @@
+.screen-men {
+    width: 97%;
+    margin: auto;
+    height: 100%;
+    border: 1px solid green;
+    margin-top: 20px;
+}
+
+.men-category-parent {
+    width: 95%;
+    margin: auto;
+    height: 380px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.men-category-parent>div{
+    width: 22%;
+    height: 90%;
+    border: 1px solid red;
+    position: relative;
+    cursor: pointer;
+}
+
+.men-category-child-1 img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+}
+
+.men-category-child-1 img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.men-category-child-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+}
+
+.men-category-child-2 img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.men-category-child-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+}
+
+.men-category-child-3 img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.men-category-child-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+}
+
+.men-category-child-4 img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* left: 100%; */
+/* right to left image ja raha tha transistion mai..  */
+/* transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+    animation: moveLeft 2s infinite linear; */
+
+
+@keyframes moveLeft {
+    0% {
+        left: 100%;
+        /* Start off-screen to the right */
+    }
+
+    100% {
+        left: 0;
+        /* Move to the left */
+    }
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    /* Adjust the background color for better visibility */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: gainsboro;
+    color: black;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}

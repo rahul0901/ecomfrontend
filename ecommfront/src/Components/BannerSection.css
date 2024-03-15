@@ -1,0 +1,121 @@
+.screen-banner {
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner-child {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    /* background-color: #027798; */
+}
+
+.banner-child-offer {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: #ecf0f1;
+    box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.3);
+}
+
+.banner-child-offer>p:nth-child(1) {
+    display: flex;
+    font-size: 42px;
+    line-height: 20px;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+}
+
+.banner-child-offer>p:nth-child(2) {
+    display: flex;
+    font-size: 76px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.banner-child-offer>span {
+    /* fit content mai jitna content utna width aur screen chota hua toh screen ki according resize hoga*/
+    /* width: fit-content; */
+    /* max content se ye span ka jitna width tha na woh hamesha utna hi rahega aur scrren chota hua toh uska content piche jaate rahega saath mai change nai hoga.. */
+    width: max-content;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    color: rgb(185, 157, 65);
+    border: 5px solid rgb(185, 157, 65);
+}
+
+.banner-child-offer>p:nth-child(4) {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    margin: 20px 0px;
+}
+
+.banner-child-offer>button {
+    width: max-content;
+    padding: 6px 12px;
+    background-color: #a066b2;
+    border-radius: 6px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.banner-child-image {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.banner-child-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+}
+
+.banner-child-image img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    /* Adjust the background color for better visibility */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: gainsboro;
+    color: black;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
